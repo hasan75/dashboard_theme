@@ -1,0 +1,23 @@
+.productButtonCOntainer{
+    background-color: var(--color-white);
+    padding: 20px 7px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-1);
+}
+
+.add-product{
+    background: var(--product-btn-background);
+    color: var(--color-white);
+    padding: 8px 12px;
+    border-radius: var(--border-radius-1);
+    font-size: 1.1rem;
+}
+
+.searchBar{
+    max-width: 20rem;
+}
+.searchBar:focus{
+    box-shadow: none !important;
+    /* border: .5px solid #; */
+}
+

@@ -26,8 +26,9 @@
    --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--color-light);
   --aside-background: #e5e6eb;
+  --product-btn-background: #146eb4;
 }
-
+ 
 /* darktheme  */
 .dark-theme-variables{
   --color-background: #181a1e;
@@ -38,6 +39,7 @@
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
   --aside-background: #272e31;
+  --product-btn-background: #a3bdcc;
 }
 
 *{
@@ -432,33 +434,10 @@ main .recent-orders a{
   text-align: right;
 }
 
-.right .recent-updates{
-  margin-top: 1rem;
-}
-.right .recent-updates h2{
-  margin-bottom: 0.8rem;
-}
-.right .recent-updates .updates{
-  background: var(--color-white);
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  box-shadow: var(--box-shadow);
-  transition: all 300ms ease;
-}
-.right .recent-updates .updates:hover{
-  box-shadow: none;
-}
-.right .recent-updates .updates .update{
-  display: grid;
-  grid-template-columns: 2.6rem auto;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
 @media screen and (max-width: 1200px) {
   .container{
     width: 94%;
-    grid-template-columns: 7rem auto;
+    grid-template-columns: 7rem calc(96vw - 7rem);
   }
   aside .logo h2{
  display: none;
@@ -575,7 +554,8 @@ main .recent-orders a{
      }
      .right{
       width: 94%;
-      margin: 0 auto 4rem;
+      margin: 0 auto 5px;
+      /* margin: 0 auto 4rem; */
      }
      .right .top{
       position: fixed;

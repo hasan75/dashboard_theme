@@ -10,6 +10,9 @@ import Apperance from './components/Apperance/Apperance';
 import Analytics from './components/Analytics/Analytics';
 import Customers from './components/Customers/Customers';
 import Messages from './components/Messages/Messages';
+import AllProducts from './components/Products/AllProducts';
+import Categories from './components/Products/Categories';
+import Inventory from './components/Products/Inventory';
 
 function App() {
   return (
@@ -18,7 +21,11 @@ function App() {
         <Routes>
           <Route path='dashboard' element={<Dashboard />}>
             <Route path='dashboard' element={<ComponentDashboard />} />
-            <Route path='products' element={<Products />} />
+            <Route path='products' element={<Products />}>
+              <Route path='' element={<AllProducts />} />
+              <Route path='categories' element={<Categories />} />
+              <Route path='inventory' element={<Inventory />} />
+            </Route>
             <Route path='orders' element={<Orders />} />
             <Route path='payment' element={<Payment />} />
             <Route path='appearance' element={<Apperance />} />
