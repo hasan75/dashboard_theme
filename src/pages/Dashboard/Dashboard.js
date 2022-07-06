@@ -87,6 +87,48 @@ const Dashboard = () => {
         </aside>
         {/* main  */}
         <main>
+          {/* top right for profile and toggle button  */}
+          <div className='right'>
+            <div className='top'>
+              <button id='menu-btn' onClick={showSideMenue}>
+                <span className='material-icons-sharp'>menu</span>
+              </button>
+              <div
+                className='theme-toggler'
+                id='theme-toggler'
+                onClick={toggleTheme}
+              >
+                <span
+                  className={`material-icons-sharp ${
+                    lightTheme ? 'active' : ''
+                  }`}
+                >
+                  light_mode
+                </span>
+                <span
+                  className={`material-icons-sharp ${
+                    !lightTheme ? 'active' : ''
+                  }`}
+                >
+                  dark_mode
+                </span>
+              </div>
+              <div className='profile'>
+                <div className='info'>
+                  <p>
+                    Hey, <b>Hasan</b>
+                  </p>
+                  <small className='txt-muted'>Admin</small>
+                </div>
+                <div className='profile-photo'>
+                  <img src={person} alt='' />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* pages to go  */}
+
           <h1>Dashboard</h1>
           <div className='date'>
             <input type='date' />
@@ -196,78 +238,6 @@ const Dashboard = () => {
             <a href='#'>Show All</a>
           </div>
         </main>
-        {/* right  */}
-        <div className='right'>
-          <div className='top'>
-            <button id='menu-btn' onClick={showSideMenue}>
-              <span className='material-icons-sharp'>menu</span>
-            </button>
-            <div
-              className='theme-toggler'
-              id='theme-toggler'
-              onClick={toggleTheme}
-            >
-              <span
-                className={`material-icons-sharp ${lightTheme ? 'active' : ''}`}
-              >
-                light_mode
-              </span>
-              <span
-                className={`material-icons-sharp ${
-                  !lightTheme ? 'active' : ''
-                }`}
-              >
-                dark_mode
-              </span>
-            </div>
-            <div className='profile'>
-              <div className='info'>
-                <p>
-                  Hey, <b>Daniel</b>
-                </p>
-                <small className='text-muted'>Admin</small>
-              </div>
-              <div className='profile-photo'>
-                <img src={person} alt='' />
-              </div>
-            </div>
-          </div>
-          <div className='recent-updates'>
-            <h2>Recent Updates</h2>
-            <div className='updates'>
-              <div className='update'>
-                <div className='profile-photo'>
-                  <img src={person} alt='' />
-                </div>
-                <div className='message'>
-                  <p>
-                    <b>Antu Khan</b> received his order
-                  </p>
-                </div>
-              </div>
-              <div className='update'>
-                <div className='profile-photo'>
-                  <img src={person} alt='' />
-                </div>
-                <div className='message'>
-                  <p>
-                    <b>Antu Khan</b> received his order
-                  </p>
-                </div>
-              </div>
-              <div className='update'>
-                <div className='profile-photo'>
-                  <img src={person} alt='' />
-                </div>
-                <div className='message'>
-                  <p>
-                    <b>Antu Khan</b> received his order
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

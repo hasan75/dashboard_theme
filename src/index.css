@@ -34,6 +34,7 @@
   --color-white: #202528;
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
+  --color-info-dark: #a3bdcc;
   --color-light: rgba(0, 0, 0, 0.4);
   --box-shadow: 0 2rem 3rem var(--color-light);
   --aside-background: #272e31;
@@ -45,7 +46,7 @@
   outline: 0;
   appearance: none;
   border: 0;
-  text-decoration: none;
+  text-decoration: none !important;
   list-style: none;
   box-sizing: border-box;
 }
@@ -71,9 +72,10 @@ body{
 display: grid;
 width: 96%;
 margin: 0;
+padding: 0;
 /* background-color:#363949 ; */
 gap: 1.8rem;
-grid-template-columns: 14rem auto 23rem;
+grid-template-columns: 14rem calc(95vw - 14rem);
 }
 aside{
  height: 100vh;
@@ -133,11 +135,12 @@ small{
   border-radius: 50%;
   overflow: hidden;
 }
-.text-muted{
+.txt-muted{
   color: var(--color-info-dark);
 }
 p{
   color: var(--color-dark-variant);
+  margin-bottom: 2px !important;
 }
 b{
   color: var(--color-dark);
@@ -441,7 +444,7 @@ main .recent-orders a{
 @media screen and (max-width: 1200px) {
   .container{
     width: 94%;
-    grid-template-columns: 7rem auto 23rem;
+    grid-template-columns: 7rem auto;
   }
   aside .logo h2{
  display: none;
@@ -526,7 +529,7 @@ main .recent-orders a{
      }
 
      main{
-      margin-top: 8rem;
+      margin-top: 5rem;
       padding: 0 2rem;
      }
      main .recent-orders{
